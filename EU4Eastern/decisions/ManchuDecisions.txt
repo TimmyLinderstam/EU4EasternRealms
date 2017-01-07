@@ -164,6 +164,88 @@ country_decisions = {
 		}
 	}
 
+form_manchu_dynasty_cheaty = {
+		major = yes
+		potential = {
+			tag = MCH
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = QNG }
+			NOT = { has_country_flag = manchu_dynasty_formed }
+
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		allow = {
+			owns = 704		# Liaoxi			
+			is_at_war = no
+			is_subject = no
+			NOT = {
+				has_ruler_modifier = tribal_succession_crisis
+			}
+		}
+		effect = {
+			change_tag = QNG
+			set_government_rank = 3
+			south_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			xinan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			north_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			if = {
+				limit = {
+					government = steppe_horde
+				}
+				change_government = despotic_monarchy
+			}
+			if = {
+				limit = {
+					technology_group = nomad_group
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
+			if = {
+				limit = {
+					NOT = { religion = confucianism }
+				}
+				change_religion = confucianism
+			}
+			set_capital = 1816 # Beijing
+			1816 = { change_culture = ROOT }
+			add_prestige = 10
+			set_country_flag = manchu_dynasty_formed
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	create_green_standard_army = {
 		potential = {
 			OR = {

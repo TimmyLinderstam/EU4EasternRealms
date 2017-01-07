@@ -1,4 +1,4 @@
-name="Europa Universalis 4: Eastern Realms"
+name="Realms of the East"
 
 path="mod/EU4Eastern"
 tags= 
@@ -9,3 +9,5 @@ tags=
 "Loading Screen"
 }
 picture="nameofapicture.png"
+
+supported_version="1.19.2.*"
