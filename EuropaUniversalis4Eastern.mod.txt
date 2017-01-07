@@ -1,0 +1,11 @@
+name="Europa Universalis 4: Eastern Realms"
+
+path="mod/EU4Eastern"
+tags= 
+{
+"Sound"
+"graphics"
+"map"
+"Loading Screen"
+}
+picture="nameofapicture.png"
